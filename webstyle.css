@@ -433,6 +433,62 @@ footer ul li a{
     font-size: 300;
     margin-top: 2rem;
 }
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: #1a2342;
+  margin-bottom: 10px;
+}
+.contact-sub {
+  color: #555;
+  margin-bottom: 50px;
+}
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.card {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 20px;
+  background: #fff;
+  border: 1px solid #e3e6ee;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #1a2342;
+  box-shadow: 0 4px 14px rgba(26, 35, 66, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+a.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(26, 35, 66, 0.15);
+}
+.card i {
+  font-size: 1.8rem;
+  color: #1a2342;
+  margin-bottom: 6px;
+}
+.card .label {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #777;
+}
+.card .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  word-break: break-word;
+}
 
 
 @media(max-width:1280px){
