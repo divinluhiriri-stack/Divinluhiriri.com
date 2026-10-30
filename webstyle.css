@@ -362,8 +362,15 @@ section {
     transform: translateY(-10px)scale(1.02);
 }
 .project-card img{
-    width: 20vw;
-    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 12px;
+}
+@media (max-width: 600px) {
+    .projects {grid-template-columns: 1fr;}
+    .projects img{aspect-ratio: 4 / 3;}
 }
 .project-card:hover .btn{
     border: 2px solid white;
@@ -421,8 +428,13 @@ footer{
 }
 footer ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 3rem;
+    padding: 0;
+    gap: 12px 20px;
+    list-style: none;
+}
 }
 footer ul li a{
     color: black;
@@ -591,4 +603,31 @@ a.card:hover {
         gap: 1rem;
     }
 
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+body { overflow-x: hidden; }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero, .about, .experience, .education {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  .projects, .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  section { padding: 40px 16px; }
+  h1, h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .projects, .skills {
+    grid-template-columns: 1fr;
+  }
+  .hero img { width: 70%; max-width: 260px; margin: 0 auto; }
+  .buttons { flex-direction: column; gap: 12px; }
 }
