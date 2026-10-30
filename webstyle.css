@@ -415,7 +415,7 @@ section {
     transform: translate(50%, -50%);
 }
 
-footer{
+.footer{
     bottom: 0;
     left: 0;
     height: 10rem;
@@ -426,7 +426,7 @@ footer{
     align-items: center;
     justify-content: center;
 }
-footer ul{
+.footer ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -435,7 +435,7 @@ footer ul{
     gap: 12px 20px;
     list-style: none;
 }
-footer ul li a{
+.footer ul li a{
     color: black;
     font-weight: 600;
 }
